@@ -9,8 +9,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        neutralBlue: '#003355',
+        foreground: '#ffffff',
+        deepNavyBlue: '#002144',
+        darkSeaGreen: '#004466',
+      },
+      fontFamily: {
+        pirate: ["Charm"],
       },
     },
   },

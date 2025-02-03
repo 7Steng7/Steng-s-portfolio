@@ -5,7 +5,7 @@ export default function Aboutme() {
   return (
     <>
       <div className="max-w-3xl h-auto rounded-lg shadow-md flex flex-col justify-center items-center bg-darkSeaGreen py-16">
-        <p className='m-5'>ToDoList</p>
+        <p className='text-lg m-5'>ToDoList</p>
         <a 
           href="https://todolist-steng.vercel.app" 
           target="_blank" 

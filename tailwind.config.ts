@@ -17,6 +17,15 @@ export default {
       fontFamily: {
         pirate: ["Charm"],
       },
+      animation: {
+        'slide-right-to-left': 'slideRightToLeft 5s linear infinite',
+      },
+      keyframes: {
+        slideRightToLeft: {
+          '0%': { transform: 'translateX(100%)' }, // Comienza fuera del contenedor (derecha)
+          '100%': { transform: 'translateX(-100%)' }, // Termina fuera del contenedor (izquierda)
+        },
+      },
     },
   },
   plugins: [],

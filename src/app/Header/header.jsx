@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Typewiter from './typewriter';
 
 
 export default function Header() {
@@ -61,15 +62,18 @@ export default function Header() {
 
   return (
     <div>
-      <div className="flex justify-end p-4">
+      <div className="flex justify-between align-items-center p-4">
+      <div className="relative overflow-hidden whitespace-nowrap w-full">
+        <Typewiter />
+      </div>
           {/* Botón para mostrar/ocultar el menú */}
         <button
           onClick={toggleHeader}
         >
           <img
             src="/assets/mapa.png"
-            width={40}
-            height={40}
+            width={60}
+            height={60}
             alt="arrow-down"
             className="transition-all duration-200"
           />

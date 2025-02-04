@@ -32,11 +32,13 @@ export default function Aboutme() {
 
   return (
     <div className="w-3xl h-auto rounded-lg shadow-md flex flex-col items-center justify-center bg-deepNavyBlue py-16 rounded-lg">
-      <h1 className="text-2xl font-semibold text-white-900 mb-4">Bitacora del capitán</h1>
-      <img src="/assets/StengPirata.jpg" alt="About me" className="w-40 h-auto rounded-lg mb-6" />
-      <section style={{ width : '80%' }}>
-        
-        <div className="bg-darkSeaGreen text-white p-6 rounded-2xl shadow-lg max-w-md">
+      <h1 className="text-3xl font-semibold text-white-900 mb-4">Bitacora del capitán</h1>
+      <section className="w-4/5 md:flex md:flex-row md:justify-center md:items-center lg:w-1/2">
+      <div className='md:w-1/2 flex flex-col justify-center items-center'>
+        <img src="/assets/StengPirata.jpg" alt="About me" className="w-40 h-auto rounded-lg mb-6 md:mb-0 md:w-full md:ml-10 lg:w-60" />
+      </div>
+      <div>
+        <div className="bg-darkSeaGreen text-white p-6 rounded-2xl shadow-lg w-md md:m-10 lg:w-5/6">
           <h3 className="text-xl font-semibold">Experiencia</h3>
           <div className="mt-2 flex items-center">
             <span className="ml-2 flex items-center">
@@ -45,7 +47,7 @@ export default function Aboutme() {
             </span>
           </div>
         </div>
-        <div className="bg-darkSeaGreen text-white p-6 rounded-2xl shadow-lg max-w-md mt-4">
+        <div className="bg-darkSeaGreen text-white p-6 rounded-2xl shadow-lg mt-10 w-md md:m-10 lg:w-5/6">
           <h3 className="text-xl font-semibold">Tecnologías dominadas</h3>
           <div className="mt-2 flex items-center">
             <span className="ml-2">⚙️</span>
@@ -54,8 +56,11 @@ export default function Aboutme() {
             </span>
           </div>
         </div>
+      </div>
+        </section>
+        <section className="w-5/6">
         <div className="max-w-3xl mx-auto">
-          <p className="text-gray-300 text-lg mb-6 w-full mt-4">
+          <p className="text-foreground text-lg mb-6 w-full mt-4">
             Durante mi travesía y aventuras como capitán del desarrollo web, he
             explorado diversos mares tecnológicos, acumulando experiencias valiosas
             y superando desafiantes tormentas. Cada logro no es más que una estrella
@@ -73,10 +78,27 @@ export default function Aboutme() {
               >
                 <div className="bg-neutralBlue text-white p-4 rounded-2xl shadow-lg max-w-md w-full">
                   <h3 className="text-lg font-bold flex items-center">
-                    <span className="text-yellow-400 mr-2">★</span>
-                    {exp.title}
+                    {/* Cambia la posición de la estrella */}
+                    {index % 2 === 0 ? (
+                      <>
+                        <span className="text-yellow-400 mr-2">★</span>
+                        {exp.title}
+                      </>
+                    ) : (
+                      <>
+                        <span className="ml-auto">{exp.title}</span>
+                        <span className="text-yellow-400 ml-2">★</span>
+                      </>
+                    )}
                   </h3>
-                  <p className="text-gray-300 mt-2">{exp.description}</p>
+                  <p className="text-gray-300 mt-2">
+                    {/* Cambia la alineación del texto */}
+                    {index % 2 === 0 ? (
+                      <span className="text-left">{exp.description}</span>
+                    ) : (
+                      <span className="text-right">{exp.description}</span>
+                    )}
+                  </p>
                 </div>
               </div>
             ))}

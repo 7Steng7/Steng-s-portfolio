@@ -34,7 +34,7 @@ export default function Typewriter() {
   }, [charIndex, isDeleting, textIndex]);
 
   return (
-    <div className="text-2xl font-bold text-white">
+    <div className="text-2xl font-bold text-white m-1">
       {currentText}
       <span className="animate-blink">|</span>
     </div>

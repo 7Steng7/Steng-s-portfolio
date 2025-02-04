@@ -61,8 +61,8 @@ export default function Header() {
       ];
 
   return (
-    <div>
-      <div className="flex justify-between align-items-center p-4">
+    <>
+      <div className="flex justify-between items-center p-4">
       <div className="relative overflow-hidden whitespace-nowrap w-full">
         <Typewiter />
       </div>
@@ -79,47 +79,48 @@ export default function Header() {
           />
         </button>
       </div>
-            {/* Contenedor de navegación con expansión dinámica */}
-            <div
-            className="transition-all duration-500 ease-in-out"
-            style={{
-              width: '100%',
-              height: showHeader ? '100vh' : '0',
-              overflow: 'hidden',
-              position: 'absolute', 
-              zIndex: 1,
-              backgroundColor: 'rgb(0 51 85 / var(--tw-bg-opacity, 1))',
-            }}
-          >
-            <section
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 p-4"
-            style={{ height: '100%' }}
-            >
-            {categories.map((category, index) => (
-                <div
-                key={index}
-                className="flex flex-col items-center justify-center text-white shadow-md rounded-md p-4 transition-all duration-300 ease-in-out"
-                style={{
-                    background: category.bgColor,
-                    height: '100%', // Asegura que ocupe toda la altura disponible en el grid
-                    width: '100%', // Asegura que ocupe toda la anchura de la columna
-                    textAlign: 'center', // Centra el texto horizontalmente
-                    transition: 'background 0.3s ease', // Animación de fondo
-                }}
-                >
-                <Link href={category.link} onClick={closeHeader} className="flex flex-col items-center justify-center text-center">
-                    <img
-                    src={category.imgSrc}
-                    alt={category.title}
-                    className="h-16 w-16 mb-2 transition-transform transform hover:scale-110"
-                    />
-                    <h2 className="text-lg font-medium">{category.title}</h2>
-                    <p className="text-xs mt-1">{category.description}</p>
-                </Link>
-                </div>
-            ))}
-            </section>
-          </div>
-        </div>
+      <div
+  className="transition-all duration-500 ease-in-out"
+  style={{
+    width: '100%',
+    height: showHeader ? '100vh' : '0',
+    overflow: 'hidden',
+    position: 'fixed',  // Cambiado de absolute a fixed
+    top: 0,             // Asegura que esté en la parte superior
+    left: 0,            // Alinea a la izquierda
+    zIndex: 9999,       // Asegura que esté por encima de otros elementos
+    backgroundColor: 'rgb(0 51 85 / var(--tw-bg-opacity, 1))',
+  }}
+>
+  <section
+    className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 p-4"
+    style={{ height: '100%' }}
+  >
+    {categories.map((category, index) => (
+      <div
+        key={index}
+        className="flex flex-col items-center justify-center text-white shadow-md rounded-md p-4 transition-all duration-300 ease-in-out"
+        style={{
+          background: category.bgColor,
+          height: '100%',
+          width: '100%',
+          textAlign: 'center',
+          transition: 'background 0.3s ease',
+        }}
+      >
+        <Link href={category.link} onClick={closeHeader} className="flex flex-col items-center justify-center text-center">
+          <img
+            src={category.imgSrc}
+            alt={category.title}
+            className="h-16 w-16 mb-2 transition-transform transform hover:scale-110"
+          />
+          <h2 className="text-lg font-medium">{category.title}</h2>
+          <p className="text-xs mt-1">{category.description}</p>
+        </Link>
+      </div>
+    ))}
+  </section>
+</div>
+    </>
   );
 }

@@ -31,7 +31,7 @@ export default function Aboutme() {
   ];
 
   return (
-    <div className="w-3xl h-auto rounded-lg shadow-md flex flex-col items-center justify-center bg-deepNavyBlue py-16 rounded-lg">
+  <div className="w-3xl h-auto shadow-md flex flex-col items-center justify-center py-16 bg-deepNavyBlue">
       <h1 className="text-3xl font-semibold text-white-900 mb-4">Bitacora del capitán</h1>
       <section className="w-4/5 md:flex md:flex-row md:justify-center md:items-center lg:w-1/2">
       <div className='md:w-1/2 flex flex-col justify-center items-center'>
@@ -59,7 +59,7 @@ export default function Aboutme() {
       </div>
         </section>
         <section className="w-5/6">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto lg:max-w-4xl">
           <p className="text-foreground text-lg mb-6 w-full mt-4">
             Durante mi travesía y aventuras como capitán del desarrollo web, he
             explorado diversos mares tecnológicos, acumulando experiencias valiosas

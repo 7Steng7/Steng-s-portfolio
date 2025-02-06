@@ -3,7 +3,7 @@ import React, { useRef } from 'react';
 export default function Aboutme() {
 
   return (
-    <section className="flex flex-col items-center justify-center p-8 bg-darkSeaGreen text-foreground rounded-md shadow-md">
+    <section className="flex flex-col items-center justify-center p-8 bg-deepNavyBlue text-foreground rounded-md shadow-md">
       <h2 className="text-3xl font-bold mb-6">Navega por mis redes</h2>
       <p className="text-center mb-6 max-w-md">
         ¡Sigue mi estela! 🌊 Las olas digitales me llevan por tierras lejanas y mares desconocidos. 

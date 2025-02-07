@@ -34,8 +34,12 @@ export default function Aboutme() {
   <div className="w-3xl h-auto shadow-md flex flex-col items-center justify-center py-16 bg-deepNavyBlue">
       <h1 className="text-3xl font-semibold text-white-900 mb-4">Bitacora del capitán</h1>
       <section className="w-4/5 md:flex md:flex-row md:justify-center md:items-center lg:w-1/2">
-      <div className='md:w-1/2 flex flex-col justify-center items-center'>
-        <img src="/assets/StengPirata.jpg" alt="About me" className="w-40 h-auto rounded-lg mb-6 md:mb-0 md:w-full md:ml-10 lg:w-60" />
+      <div className="relative flex justify-center items-center">
+        <img 
+          src="/assets/StengPirata.jpg" 
+          alt="About me" 
+          className="w-40 h-auto rounded-lg md:w-full md:ml-10 lg:w-60 fade-inward"
+        />
       </div>
       <div>
         <div className="bg-darkSeaGreen text-white p-6 rounded-2xl shadow-lg w-md md:m-10 lg:w-5/6">
@@ -59,7 +63,7 @@ export default function Aboutme() {
       </div>
         </section>
         <section className="w-5/6">
-        <div className="max-w-3xl mx-auto lg:max-w-4xl">
+        <div className="max-w-3xl mx-auto lg:max-w-6xl">
           <p className="text-foreground text-lg mb-6 w-full mt-4">
             Durante mi travesía y aventuras como capitán del desarrollo web, he
             explorado diversos mares tecnológicos, acumulando experiencias valiosas

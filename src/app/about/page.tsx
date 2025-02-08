@@ -82,7 +82,6 @@ export default function Aboutme() {
               >
                 <div className="bg-neutralBlue text-white p-4 rounded-2xl shadow-lg max-w-md w-full">
                   <h3 className="text-lg font-bold flex items-center">
-                    {/* Cambia la posición de la estrella */}
                     {index % 2 === 0 ? (
                       <>
                         <span className="text-yellow-400 mr-2">★</span>
@@ -96,7 +95,6 @@ export default function Aboutme() {
                     )}
                   </h3>
                   <p className="text-gray-300 mt-2">
-                    {/* Cambia la alineación del texto */}
                     {index % 2 === 0 ? (
                       <span className="text-left">{exp.description}</span>
                     ) : (

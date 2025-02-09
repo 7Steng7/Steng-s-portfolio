@@ -4,7 +4,7 @@ export default function TimonVideo() {
   const videoRef = useRef();
 
   return (
-    <div className="w-60 h-60 max-w-3xl h-auto rounded-lg shadow-md mb-6 mt-6 md:w-96 md:h-96 lg:w-100 lg:h-100">
+    <div className="w-60 h-60 max-w-3xl h-auto rounded-lg mb-6 mt-6 md:w-96 md:h-96 lg:w-100 lg:h-100">
         <video
             className="w-full h-auto rounded-lg"
             ref={videoRef}

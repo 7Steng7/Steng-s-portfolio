@@ -18,7 +18,7 @@ export default function RootLayout({
       <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap" rel="stylesheet"/>
       </head>
       <body
-        className={`antialiased bg-neutralBlue text-foreground rounded-md shadow-md`}
+        className={`antialiased bg-deepNavyBlue text-foreground rounded-md shadow-md`}
       >
         <Header />
         {children}

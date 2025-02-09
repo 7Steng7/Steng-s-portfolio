@@ -20,6 +20,9 @@ export default {
       animation: {
         'slide-right-to-left': 'slideRightToLeft 5s linear infinite',
         'bounce' : 'bounce 5s ease-in-out infinite', // Ajusta la duración y el tipo de animación
+        'floating': 'floating 2s ease-in-out infinite',
+        'floatingLeft': 'floatingLeft 2s ease-in-out infinite',
+        'floatingRight': 'floatingRight 2s ease-in-out infinite',
       },
       keyframes: {
         slideRightToLeft: {
@@ -33,6 +36,21 @@ export default {
           '50%': { transform: 'translateY(0)' },
           '67%': { transform: 'translateY(-8px)' },
           '84%': { transform: 'translateY(-4px)' },
+        },
+        floating: {
+          '0%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-5px)' },
+          '100%': { transform: 'translateY(0)' },
+        },
+        floatingLeft: {
+          '0%': { transform: 'translateX(0)' },
+          '50%': { transform: 'translateX(-5px)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+        floatingRight: {
+          '0%': { transform: 'translateX(0)' },
+          '50%': { transform: 'translateX(5px)' },
+          '100%': { transform: 'translateX(0)' },
         },
       },
     },

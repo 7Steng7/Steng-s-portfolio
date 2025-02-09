@@ -75,7 +75,7 @@ export default function Aboutme() {
 
           <div className="mt-4">
             <h3 className="text-lg font-medium">💾 Bases de datos</h3>
-            <p className="ml-4">MongoDB, MySQL, Firebase, AWS</p>
+            <p className="ml-4">MongoDB, MySQL, Firebase, AWS(RDS)</p>
           </div>
 
           <div className="mt-4">
@@ -93,7 +93,7 @@ export default function Aboutme() {
       <section className="w-5/6">
       <h1 className="text-3xl font-semibold text-white-900 mb-4 text-center relative">
         <span className="absolute bottom-0 text-6xl opacity-30 animate-pulse z-0">⚓</span>
-        <span className="relative z-10">Diario de Viaje: Islas descubiertas</span>
+        <span className="relative z-10">Diario de viaje: Islas descubiertas</span>
       </h1>
       <div className="min-h-screen">
         <div className="max-w-3xl mx-auto lg:max-w-6xl pt-16">

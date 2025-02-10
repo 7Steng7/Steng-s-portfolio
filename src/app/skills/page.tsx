@@ -54,7 +54,7 @@ export default function Aboutme() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 px-4 w-full md:w-5/6 lg:w-3/4">
           {skillsData.map((category, index) => (
             <div key={index} className="bg-deepNavyBlue p-6 rounded-lg shadow-md text-center">
-              <img src={category.icon} alt={category.title} className="mx-auto mb-4 w-16 h-16" />
+              <img src={category.icon} alt={category.title} className="mx-auto mb-4 w-16 h-16 animate-swing" />
               <h3 className="text-xl font-medium text-white mb-4">{category.title}</h3>
               <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6">
                 {category.skills.map((skill, idx) => (
@@ -62,12 +62,9 @@ export default function Aboutme() {
                     key={idx} 
                     className="flex flex-col items-center group cursor-pointer"
                   >
-                    {/* Ícono con animación */}
                     <div className="text-white text-5xl transition-transform transform group-hover:scale-110 duration-300">
                       {skill.icon}
                     </div>
-                    
-                    {/* Contenedor con altura inicial y expansión al hover/click */}
                     <div className="max-h-0 overflow-hidden transition-all duration-500 group-hover:max-h-60 group-focus:max-h-60">
                       <p className="text-white text-md mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         {skill.name}

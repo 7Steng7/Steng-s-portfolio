@@ -106,7 +106,7 @@ export default function Aboutme() {
                 }`}
               >
                 <div
-                  className={`relative bg-center p-6 max-w-md w-full bg-no-repeat ${
+                  className={`relative bg-center p-6 max-w-lg w-full bg-no-repeat ${
                     index % 2 === 0 ? "animate-floatingLeft" : "animate-floatingRight"
                   }`}
                   style={{ backgroundImage: "url('/assets/isla.svg')" }}

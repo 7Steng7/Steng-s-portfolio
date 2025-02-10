@@ -33,40 +33,48 @@ export default function Aboutme() {
 
       <div className="w-full h-auto rounded-lg shadow-md flex flex-col justify-center items-center py-16">
         <h2 className="text-2xl font-semibold mb-4">Proyectos</h2>
-        <a 
-          href="https://todolist-steng.vercel.app" 
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group"
-        >
-          <div className="relative w-60 h-60 transform transition-all duration-300 group-hover:scale-110">
-            <img  
-              src="/assets/ToDoList.png" 
-              alt="About me" 
-              className="w-full h-full rounded-lg shadow-md text-center transition-all duration-300 filter"
-            />
-            <div className="absolute inset-0 bg-darkSeaGreen opacity-40 mix-blend-multiply rounded-lg transition-all duration-300 group-hover:opacity-0"></div>
-            <div className="absolute bottom-2 right-2 flex space-x-2">
-              <a 
-                href="https://github.com/7Steng7/todolist" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-white bg-black bg-opacity-50 rounded-full p-2 hover:bg-opacity-70 transition-all duration-300"
-              >
-                             <FaGithub size={18} />
-              </a>
-              <a 
-                href="https://todolist-steng.vercel.app" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-white bg-black bg-opacity-50 rounded-full p-2 hover:bg-opacity-70 transition-all duration-300"
-              >
-                <FaExternalLinkAlt size={18} />
-              </a>
-            </div>
-          </div>
-        </a>
+        <div className="w-full max-w-4xl flex flex-col md:flex-row items-center gap-8 p-6">
+      {/* Imagen del proyecto */}
+      <div className="relative w-60 h-60 transform transition-all duration-300 group group-hover:scale-110">
+        <img  
+          src="/assets/ToDoList.png" 
+          alt="ToDoList Project" 
+          className="w-full h-full rounded-lg shadow-md text-center transition-all duration-300 filter"
+        />
+        <div className="absolute inset-0 bg-darkSeaGreen opacity-40 mix-blend-multiply rounded-lg transition-all duration-300 group-hover:opacity-0"></div>
+        <div className="absolute bottom-2 right-2 flex space-x-2">
+          <a 
+            href="https://github.com/7Steng7/todolist" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-white bg-black bg-opacity-50 rounded-full p-2 hover:bg-opacity-70 transition-all duration-300"
+          >
+            <FaGithub size={18} />
+          </a>
+          <a 
+            href="https://todolist-steng.vercel.app" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-white bg-black bg-opacity-50 rounded-full p-2 hover:bg-opacity-70 transition-all duration-300"
+          >
+            <FaExternalLinkAlt size={18} />
+          </a>
+        </div>
       </div>
+      <div className="flex-1">
+        <h2 className="text-2xl font-semibold mb-4">ToDoList</h2>
+        <p className="text-white mb-4">
+          ToDoList es una aplicación sencilla y efectiva para gestionar tus tareas diarias. Esta app te permite crear, editar y eliminar tareas, así como clasificarlas en categorías y marcar su nivel de urgencia e importancia, siguiendo el enfoque de la Matriz de Eisenhower. Además, utiliza localStorage para guardar tus datos, lo que permite que tus tareas se mantengan disponibles incluso después de cerrar el navegador.
+        </p>
+        <h3 className="text-xl font-medium mb-2">Tecnologías Utilizadas:</h3>
+        <div className="flex flex-wrap gap-2">
+          <span className="bg-darkSeaGreen text-white px-3 py-1 rounded-full text-sm">React</span>
+          <span className="bg-darkSeaGreen text-white px-3 py-1 rounded-full text-sm">Html5</span>
+          <span className="bg-darkSeaGreen text-white px-3 py-1 rounded-full text-sm">Css3</span>
+        </div>
+      </div>
+    </div>
+        </div>
     </section>
   );
 }

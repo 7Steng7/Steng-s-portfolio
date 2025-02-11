@@ -54,7 +54,7 @@ export default function Aboutme() {
         <div className="bg-darkSeaGreen text-white p-6 rounded-2xl shadow-lg w-md transform transition-all duration-300 hover:scale-105 hover:shadow-lg md:m-10 lg:w-5/6">
           <h2 className="text-xl font-semibold">Experiencia</h2> 
           <div className="mt-2 flex items-center">
-            <p className="ml-2 flex items-center">
+            <p className="ml-2 flex items-center text-lg">
             Actualmente cuento con 3+ años de experiencia en desarrollo y gestión de proyectos tecnológicos. Me especializo en desarrollo fullstack y aplicaciones móviles.
             <span className="ml-2 text-3xl animate-floating">⛵</span>
             </p>
@@ -120,7 +120,7 @@ export default function Aboutme() {
                         </>
                       ) : (
                         <>
-                          <span className="ml-auto">{exp.title}</span>
+                          <span className="ml-auto text-lg">{exp.title}</span>
                           <span className="ml-2">★</span>
                         </>
                       )}

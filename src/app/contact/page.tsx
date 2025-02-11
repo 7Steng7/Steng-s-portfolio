@@ -5,7 +5,7 @@ export default function Aboutme() {
   return (
     <section className="flex flex-col items-center justify-center p-8 bg-darkSeaGreen text-foreground rounded-md shadow-md">
       <h2 className="text-3xl font-bold mb-6">Navega por mis redes</h2>
-      <p className="text-center mb-6 max-w-md">
+      <p className="text-center mb-6 max-w-md text-lg">
         ¡Sigue mi estela! 🌊 Las olas digitales me llevan por tierras lejanas y mares desconocidos. 
         Únete a mi tripulación o sigue mis aventuras en las redes sociales.
       </p>
@@ -15,7 +15,7 @@ export default function Aboutme() {
           <img
             src="/assets/github.png"
             alt="GitHub"
-            className="w-14 h-14 transform hover:scale-110 transition-transform duration-300 hover:rotate-6"
+            className="w-16 h-16 transform hover:scale-110 transition-transform duration-300 hover:rotate-6"
             style={{ filter: "brightness(0) invert(1)" }}
           />
         </a>
@@ -24,7 +24,7 @@ export default function Aboutme() {
           <img
             src="/assets/linkedIn.png"
             alt="LinkedIn"
-            className="w-14 h-14 transform hover:scale-110 transition-transform duration-300 hover:rotate-6"
+            className="w-16 h-16 transform hover:scale-110 transition-transform duration-300 hover:rotate-6"
             style={{ filter: "brightness(0) invert(1)" }}
           />
         </a>
@@ -33,7 +33,7 @@ export default function Aboutme() {
           <img
             src="/assets/position.png"
             alt="Hoja de Vida"
-            className="w-14 h-14 transform hover:scale-110 transition-transform duration-300 hover:rotate-6"
+            className="w-16 h-16 transform hover:scale-110 transition-transform duration-300 hover:rotate-6"
             style={{ filter: "brightness(0) invert(1)" }}
           />
         </a>

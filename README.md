@@ -1,37 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# **Página Web Personal**  
 
-## Getting Started
+¡Bienvenido a mi página web personal! Este proyecto es una representación digital de mi perfil profesional, donde muestro mis habilidades, experiencia y proyectos destacados. Está construido con **Next.js** y **Tailwind CSS**, lo que garantiza un rendimiento óptimo y un diseño moderno y responsive.  
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## **Características Principales**  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Diseño Moderno y Responsive**: La página está diseñada para verse y funcionar perfectamente en cualquier dispositivo, desde móviles hasta escritorios.  
+- **Información Profesional**: Muestra mi experiencia laboral, habilidades técnicas, proyectos destacados y datos de contacto.  
+- **Tecnologías de Vanguardia**: Utiliza **Next.js** para el renderizado del lado del servidor (SSR) y **Tailwind CSS** para un diseño rápido y personalizable.  
+- **Fácil de Mantener**: La estructura del proyecto está organizada para facilitar actualizaciones y mejoras continuas.  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## **Tecnologías Utilizadas**  
 
-## Learn More
+- **Next.js**: Framework de React para aplicaciones web modernas con SSR y enrutamiento dinámico.  
+- **Tailwind CSS**: Framework de CSS utility-first para diseñar interfaces de usuario de manera rápida y eficiente.  
+- **React**: Biblioteca de JavaScript para construir interfaces de usuario interactivas.  
+- **JavaScript**: Lenguaje de programación principal para la lógica del proyecto.  
+- **HTML5 y CSS3**: Estructura y estilos base de la página.  
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## **Contacto**  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Si tienes alguna pregunta o quieres ponerte en contacto conmigo, no dudes en escribirme a **[stengdeveloper@gmail.com](mailto:stengdeveloper@gmail.com)** o visitar mi perfil de **[LinkedIn](https://www.linkedin.com/in/sebastian-moreno-rodriguez-b65267183/)**.  
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+¡Gracias por visitar mi página web! Espero que encuentres útil la información y el código proporcionado. 😊  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# Steng-s-portfolio

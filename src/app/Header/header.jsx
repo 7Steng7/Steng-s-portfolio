@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Typewiter from './typewriter';
 import Ship from './ship';
-
+import Image from 'next/image';
 
 export default function Header() {
     const [showHeader, setShowHeader] = useState(false);
@@ -69,7 +69,7 @@ export default function Header() {
         <button
           onClick={toggleHeader}
         >
-          <img
+          <Image
             src="/assets/mapa.png"
             width={60}
             height={60}

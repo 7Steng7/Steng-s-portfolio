@@ -1,4 +1,5 @@
-import React, { useRef } from 'react';
+import React from 'react';
+import Image from 'next/image';
 
 export default function Aboutme() {
 
@@ -44,10 +45,12 @@ export default function Aboutme() {
       </div>
       <section className="w-4/5 md:w-full md:flex md:flex-row md:justify-center md:items-center lg:w-5/6 lg:justify-evenly mb-16">
       <div className="relative flex justify-center items-center">
-        <img 
-          src="/assets/StengPirata.jpg" 
-          alt="About me" 
-          className="w-40 h-auto rounded-lg md:w-full md:ml-10 lg:w-60 fade-inward"
+        <Image
+          src="/assets/StengPirata.jpg"
+          alt="About me"
+          width={160}
+          height={160}
+          className="rounded-lg md:w-full md:ml-10 lg:w-60 fade-inward"
         />
       </div>
       <div className='lg:w-3/5'>

@@ -1,6 +1,6 @@
 import React from 'react';
-import { FaReact, FaNodeJs, FaAngular, FaBootstrap, FaAws, FaGit, FaDocker } from 'react-icons/fa';
-import { SiNextdotjs, SiTailwindcss, SiExpress, SiJsonwebtokens, SiNestjs, SiMongodb, SiMysql, SiFirebase, SiPostman, SiTrello, SiGooglemaps } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaAngular, FaAws, FaGit, FaDocker } from 'react-icons/fa';
+import { SiNextdotjs, SiTailwindcss, SiExpress, SiJsonwebtokens, SiNestjs, SiMongodb, SiMysql, SiFirebase, SiPostman, SiTrello } from 'react-icons/si';
 
 export default function Aboutme() {
 

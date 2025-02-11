@@ -1,4 +1,5 @@
-import React, { useRef } from 'react';
+import React from 'react';
+import Image from 'next/image';
 
 export default function Aboutme() {
 
@@ -12,29 +13,35 @@ export default function Aboutme() {
       <div className="flex space-x-8">
         {/* Icono de GitHub */}
         <a href="https://github.com/7Steng7" target="_blank" rel="noopener noreferrer">
-          <img
+          <Image
             src="/assets/github.png"
             alt="GitHub"
+            width={64}
+            height={64}
             className="w-16 h-16 transform hover:scale-110 transition-transform duration-300 hover:rotate-6"
             style={{ filter: "brightness(0) invert(1)" }}
           />
         </a>
         {/* Icono de LinkedIn */}
         <a href="https://www.linkedin.com/in/sebastian-moreno-rodriguez-b65267183/" target="_blank" rel="noopener noreferrer">
-          <img
+          <Image
             src="/assets/linkedIn.png"
             alt="LinkedIn"
+            width={64}
+            height={64}
             className="w-16 h-16 transform hover:scale-110 transition-transform duration-300 hover:rotate-6"
             style={{ filter: "brightness(0) invert(1)" }}
           />
         </a>
         {/* Hoja de vida */}
         <a href="/assets/CV.pdf" target="_blank" rel="noopener noreferrer">
-          <img
+          <Image
             src="/assets/position.png"
             alt="Hoja de Vida"
             className="w-16 h-16 transform hover:scale-110 transition-transform duration-300 hover:rotate-6"
             style={{ filter: "brightness(0) invert(1)" }}
+            width={64}
+            height={64}
           />
         </a>
       </div>

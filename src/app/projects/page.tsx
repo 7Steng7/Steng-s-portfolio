@@ -57,10 +57,10 @@ export default function Aboutme() {
       {projectsData.projects.map((project, index) => (
         <div
           key={index}
-          className="flex flex-col md:flex-row items-start gap-8 mb-12"
+          className="flex flex-col md:flex-row items-center gap-8 mb-12"
         >
           {/* Imagen a la izquierda con iconos superpuestos */}
-          <div className="w-full md:w-60 flex-shrink-0 relative">
+          <div className="w-full md:w-60 flex-shrink-0 relative flex justify-center">
             <div className="relative w-60 h-60 transform transition-all duration-300 group group-hover:scale-110">
               <img
                 src={project.image}

@@ -7,7 +7,7 @@ export default function Ship() {
         <img 
             src="/assets/ShipBackground.png" 
             alt="Ship" 
-            className="w-full h-auto max-h-screen object-cover object-center animate-bounce" // Aplicar la animación aquí
+            className="w-full h-auto max-h-screen object-cover object-center animate-bounce"
         />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-deepNavyBlue to-transparent"></div>
     </div>

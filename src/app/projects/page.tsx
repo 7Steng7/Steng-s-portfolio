@@ -67,7 +67,7 @@ export default function Aboutme() {
                 alt={`${project.title} Project`}
                 className="w-full h-full rounded-lg shadow-md text-center transition-all duration-300 filter"
               />
-              <div className="absolute inset-0 bg-darkSeaGreen opacity-40 mix-blend-multiply rounded-lg transition-all duration-300 group-hover:opacity-0"></div>
+              <div className="absolute inset-0 bg-deepNavyBlue opacity-60 mix-blend-multiply rounded-lg transition-all duration-300 group-hover:opacity-0"></div>
               {/* Iconos superpuestos en la esquina inferior derecha */}
               <div className="absolute bottom-2 right-2 flex space-x-2">
                 <a

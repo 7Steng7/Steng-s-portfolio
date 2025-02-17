@@ -2,6 +2,27 @@ import React from 'react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 export default function Aboutme() {
+
+  const projectsData = {
+    "projects": [
+      {
+        "title": "ToDoList",
+        "description": "ToDoList es una aplicación sencilla y efectiva para gestionar tus tareas diarias. Esta app te permite crear, editar y eliminar tareas, así como clasificarlas en categorías y marcar su nivel de urgencia e importancia, siguiendo el enfoque de la Matriz de Eisenhower. Además, utiliza localStorage para guardar tus datos, lo que permite que tus tareas se mantengan disponibles incluso después de cerrar el navegador.",
+        "technologies": ["React", "Html5", "Css3"],
+        "image": "/assets/ToDoList.png",
+        "github": "https://github.com/7Steng7/todolist",
+        "deploy": "https://todolist-steng.vercel.app"
+      },
+      {
+        "title": "API blog",
+        "description": "Desarrollé una API RESTful para gestionar publicaciones de blog, usuarios y comentarios utilizando NestJS y MongoDB. La API incluye autenticación de usuarios, validación de datos, seguridad con contraseñas hasheadas y documentación automática con Swagger. Este proyecto demuestra mi habilidad para construir APIs escalables, modulares y bien documentadas. Además, generé una instancia en Google Cloud Platform (GCP) para desplegar la API, lo que me permitió gestionar infraestructura en la nube, configurar redes, y asegurar el despliegue de aplicaciones en un entorno profesional.",
+        "technologies": ["NestJS", "MongoDB", "Mongoose", "API Integration", "Swagger", 'Bcrypt', "Jest", "GCP"],
+        "image": "/assets/blogApi.png",
+        "github": "https://github.com/7Steng7/stengsBlogAPI"
+      }
+    ]
+  }
+
   return (
     <section className="flex flex-col justify-center items-center rounded-lg">
       <div className="mt-8 text-center w-full max-w-2xl">
@@ -30,50 +51,65 @@ export default function Aboutme() {
           </div>
         </div>
       </div>
-
-      <div className="w-full h-auto rounded-lg shadow-md flex flex-col justify-center items-center py-16">
-        <h2 className="text-3xl font-semibold mb-4">Proyectos</h2>
-        <div className="w-full max-w-4xl flex flex-col md:flex-row items-center gap-8 p-6">
-      <div className="relative w-60 h-60 transform transition-all duration-300 group group-hover:scale-110">
-        <img  
-          src="/assets/ToDoList.png" 
-          alt="ToDoList Project" 
-          className="w-full h-full rounded-lg shadow-md text-center transition-all duration-300 filter"
-        />
-        <div className="absolute inset-0 bg-darkSeaGreen opacity-40 mix-blend-multiply rounded-lg transition-all duration-300 group-hover:opacity-0"></div>
-        <div className="absolute bottom-2 right-2 flex space-x-2">
-          <a 
-            href="https://github.com/7Steng7/todolist" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-white bg-black bg-opacity-50 rounded-full p-2 hover:bg-opacity-70 transition-all duration-300"
-          >
-            <FaGithub size={18} />
-          </a>
-          <a 
-            href="https://todolist-steng.vercel.app" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-white bg-black bg-opacity-50 rounded-full p-2 hover:bg-opacity-70 transition-all duration-300"
-          >
-            <FaExternalLinkAlt size={18} />
-          </a>
+    <div className="w-full h-auto rounded-lg shadow-md flex flex-col justify-center items-center py-16">
+      <h2 className="text-3xl font-semibold mb-4">Proyectos</h2>
+      <div className="w-full max-w-4xl mx-auto p-6">
+      {projectsData.projects.map((project, index) => (
+        <div
+          key={index}
+          className="flex flex-col md:flex-row items-start gap-8 mb-12"
+        >
+          {/* Imagen a la izquierda con iconos superpuestos */}
+          <div className="w-full md:w-60 flex-shrink-0 relative">
+            <div className="relative w-60 h-60 transform transition-all duration-300 group group-hover:scale-110">
+              <img
+                src={project.image}
+                alt={`${project.title} Project`}
+                className="w-full h-full rounded-lg shadow-md text-center transition-all duration-300 filter"
+              />
+              <div className="absolute inset-0 bg-darkSeaGreen opacity-40 mix-blend-multiply rounded-lg transition-all duration-300 group-hover:opacity-0"></div>
+              {/* Iconos superpuestos en la esquina inferior derecha */}
+              <div className="absolute bottom-2 right-2 flex space-x-2">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white bg-black bg-opacity-50 rounded-full p-2 hover:bg-opacity-70 transition-all duration-300"
+                >
+                  <FaGithub size={18} />
+                </a>
+                {project.deploy && (
+                  <a
+                    href={project.deploy}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white bg-black bg-opacity-50 rounded-full p-2 hover:bg-opacity-70 transition-all duration-300"
+                  >
+                    <FaExternalLinkAlt size={18} />
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+          <div className="flex-1 flex flex-col gap-4">
+            <h2 className="text-2xl font-semibold">{project.title}</h2>
+            <p className="text-white text-lg">{project.description}</p>
+            <h3 className="text-xl font-medium">Tecnologías Utilizadas:</h3>
+            <div className="flex flex-wrap gap-2">
+              {project.technologies.map((tech, techIndex) => (
+                <span
+                  key={techIndex}
+                  className="bg-darkSeaGreen text-white px-3 py-1 rounded-full text-sm"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="flex-1">
-        <h2 className="text-2xl font-semibold mb-4">ToDoList</h2>
-        <p className="text-white mb-4 text-lg">
-          ToDoList es una aplicación sencilla y efectiva para gestionar tus tareas diarias. Esta app te permite crear, editar y eliminar tareas, así como clasificarlas en categorías y marcar su nivel de urgencia e importancia, siguiendo el enfoque de la Matriz de Eisenhower. Además, utiliza localStorage para guardar tus datos, lo que permite que tus tareas se mantengan disponibles incluso después de cerrar el navegador.
-        </p>
-        <h3 className="text-xl font-medium mb-2">Tecnologías Utilizadas:</h3>
-        <div className="flex flex-wrap gap-2">
-          <span className="bg-darkSeaGreen text-white px-3 py-1 rounded-full text-sm">React</span>
-          <span className="bg-darkSeaGreen text-white px-3 py-1 rounded-full text-sm">Html5</span>
-          <span className="bg-darkSeaGreen text-white px-3 py-1 rounded-full text-sm">Css3</span>
-        </div>
-      </div>
+      ))}
     </div>
-        </div>
+    </div>
     </section>
   );
 }

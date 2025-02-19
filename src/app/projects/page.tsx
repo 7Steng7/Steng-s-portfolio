@@ -8,7 +8,7 @@ export default function Aboutme() {
       {
         "title": "ToDoList",
         "description": "ToDoList es una aplicación sencilla y efectiva para gestionar tus tareas diarias. Esta app te permite crear, editar y eliminar tareas, así como clasificarlas en categorías y marcar su nivel de urgencia e importancia, siguiendo el enfoque de la Matriz de Eisenhower. Además, utiliza localStorage para guardar tus datos, lo que permite que tus tareas se mantengan disponibles incluso después de cerrar el navegador.",
-        "technologies": ["React", "Html5", "Css3"],
+        "technologies": ["React", "Html5", "Css3", "localStorage"],
         "image": "/assets/ToDoList.png",
         "github": "https://github.com/7Steng7/todolist",
         "deploy": "https://todolist-steng.vercel.app"

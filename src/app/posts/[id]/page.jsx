@@ -2,7 +2,6 @@ export default async function PostDetail({ params }) {
       const { id } = await params;
       const response = await fetch(`http://localhost/posts/${id}`);
       const post = await response.json();
-    console.log(post);
     if (!post) {
       return (
         <div className="w-full md:w-60 h-60 m-auto rounded-lg shadow-md mb-6 mt-6 flex flex-col justify-center items-center bg-darkSeaGreen p-6">

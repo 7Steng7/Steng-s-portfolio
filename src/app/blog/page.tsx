@@ -17,10 +17,6 @@ export default async function Aboutme() {
     error = (err as Error).message;
   }
 
-  const capitalizeFirstLetter = (string: string) => {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  };
-
   return (
   <div className="flex justify-center items-center h-screen">
       {error || posts.length === 0 ? (
@@ -56,9 +52,9 @@ export default async function Aboutme() {
                     {post.tags.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="bg-darkSeaGreen text-white px-3 py-3 rounded-full text-sm"
+                        className="bg-darkSeaGreen text-white px-3 py-3 rounded-full text-sm capitalize"
                       >
-                      {capitalizeFirstLetter(tech)}
+                      {tech}
                       </span>
                     ))}
                   </div>

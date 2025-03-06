@@ -34,7 +34,7 @@ export default function Aboutme() {
           />
         </a>
         {/* Hoja de vida */}
-        <a href="/assets/SebastianMorenoCV.pdf" target="_blank" rel="noopener noreferrer">
+        <a href="/assets/CVSebastianMoreno.pdf" target="_blank" rel="noopener noreferrer">
           <Image
             src="/assets/position.png"
             alt="Hoja de Vida"

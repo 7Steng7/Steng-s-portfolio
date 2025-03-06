@@ -1,24 +1,43 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaFile } from 'react-icons/fa';
 import Link from 'next/link';
 import { Post } from '../types/Post';
+import { login } from './auth';
 
-export default async function Aboutme() {
-  let error: string | null = null;
-  let posts: Post[] = [];
+export default function Aboutme() {
+  const [posts, setPosts] = useState<Post[]>([]);
+  const [error, setError] = useState<string | null>(null);
 
-  try {
-    const response = await fetch('http://localhost/posts');
-    if (!response.ok) {
-      throw new Error('Error al cargar las publicaciones');
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const token = await login();
+        const response = await fetch('http://localhost/posts', {
+          headers: {
+            'Authorization': `Bearer ${token}`,
+          },
+        });
+
+        if (!response.ok) {
+          throw new Error('Error al cargar las publicaciones');
+        }
+
+        const data = await response.json();
+        setPosts(data);
+      } catch (err) {
+        if (err instanceof Error) {
+          setError(err.message);
+        } else {
+          setError('An unknown error occurred');
+        }
+      }
     }
-    posts = await response.json();
-  } catch (err: unknown) {
-    error = (err as Error).message;
-  }
+
+    fetchData();
+  }, []);
 
   return (
-  <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center h-screen">
       {error || posts.length === 0 ? (
         <div className="w-5/6 md:w-1/2 h-80 m-auto rounded-lg shadow-md mb-6 mt-6 flex flex-col justify-center items-center bg-darkSeaGreen p-6">
           <FaFile className="h-20 w-20 text-white mb-4" />
@@ -38,26 +57,26 @@ export default async function Aboutme() {
             {posts.map((post) => (
               <li key={post._id} className="text-white text-base md:text-lg lg:text-xl transform transition-all duration-500 hover:scale-105 bg-deepNavyBlue p-4 rounded-lg">
                 <Link href={`/posts/${post._id}`}>
-                <div className="flex justify-between items-center">
-                  <h2 className="text-white text-base md:text-lg lg:text-xl py-2 md:py-4 hover:text-gray-300 transition-colors duration-200">
-                    {post.title}
-                  </h2>
-                  <p className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-200">
-                    {new Intl.NumberFormat().format(post.views)}
-                    <span role="img" aria-label="views">👀</span>
-                  </p>
-                </div>
+                  <div className="flex justify-between items-center">
+                    <h2 className="text-white text-base md:text-lg lg:text-xl py-2 md:py-4 hover:text-gray-300 transition-colors duration-200">
+                      {post.title}
+                    </h2>
+                    <p className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-200">
+                      {new Intl.NumberFormat().format(post.views)}
+                      <span role="img" aria-label="views">👀</span>
+                    </p>
+                  </div>
                   {post.tags.length > 0 && (
                     <div className="flex flex-wrap gap-2">
-                    {post.tags.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="bg-darkSeaGreen text-white px-3 py-3 rounded-full text-sm capitalize"
-                      >
-                      {tech}
-                      </span>
-                    ))}
-                  </div>
+                      {post.tags.map((tech, techIndex) => (
+                        <span
+                          key={techIndex}
+                          className="bg-darkSeaGreen text-white px-3 py-3 rounded-full text-sm capitalize"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   )}
                 </Link>
               </li>

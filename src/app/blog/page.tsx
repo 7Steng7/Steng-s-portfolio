@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaFile } from 'react-icons/fa';
 import Link from 'next/link';
 import { Post } from '../types/Post';

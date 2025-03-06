@@ -1,12 +1,12 @@
 export async function login() {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/login`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        username: process.env.API_USERNAME,
-        password: process.env.API_PASSWORD,
+        email: process.env.NEXT_PUBLIC_API_USERNAME,
+        password: process.env.NEXT_PUBLIC_API_PASSWORD,
       }),
     });
   
@@ -15,5 +15,5 @@ export async function login() {
     }
   
     const data = await response.json();
-    return data.token;
+    return data.access_token;
   }

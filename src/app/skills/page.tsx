@@ -66,10 +66,10 @@ export default function Aboutme() {
                       {skill.icon}
                     </div>
                     <div className="max-h-0 overflow-hidden transition-all duration-500 group-hover:max-h-60 group-focus:max-h-60">
-                      <p className="text-white text-lg mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-white text-lg md:text-xl mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         {skill.name}
                       </p>
-                      <p className="text-white text-sm mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center max-w-xs">
+                      <p className="text-white text-sm md:text-base mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center max-w-xs">
                         {skill.description}
                       </p>
                     </div>

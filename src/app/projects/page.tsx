@@ -27,14 +27,14 @@ export default function Aboutme() {
     <section className="flex flex-col justify-center items-center rounded-lg">
       <div className="mt-8 text-center w-full max-w-2xl">
         <h2 className="text-3xl font-semibold mb-4">Experiencia Laboral</h2>
-        <h3 className="text-lg font-medium">Bicycle Capital</h3>
-        <p className="text-white text-lg">Desarrollador FullStack</p>
-        <p className="text-white mb-5 text-lg">Septiembre 2022 - Febrero 2025</p>
+        <h3 className="text-lg md:text-xl font-medium">Bicycle Capital</h3>
+        <p className="text-white text-lg md:text-xl">Desarrollador FullStack</p>
+        <p className="text-white mb-5 text-lg md:text-xl">Septiembre 2022 - Febrero 2025</p>
         <div className="p-6 rounded-lg shadow-md mt-4 transform transition-all duration-300 hover:scale-105 bg-darkSeaGreen">
           <h2 className="text-2xl font-semibold mb-4">Responsabilidades y Logros</h2>
           <div className="text-left rounded-lg">
             <h3 className="text-xl font-medium mb-2">Responsabilidades:</h3>
-            <ul className="list-disc list-inside text-white mb-4 text-lg">
+            <ul className="list-disc list-inside text-white mb-4 text-lg md:text-xl">
               <li>Gestión y mantenimiento de APIs, desarrollo de interfaces en <strong>React Native</strong> y creación de un dashboard en <strong>Angular</strong>.</li>
               <li>Configuración y administración de instancias <strong>EC2</strong>, gestión de DNS con <strong>Route53</strong> y balanceadores de carga.</li>
               <li>Implementación de autenticación con <strong>JWT</strong> en APIs construidas con <strong>Node.js</strong> y <strong>Nest.js</strong>.</li>
@@ -42,7 +42,7 @@ export default function Aboutme() {
             </ul>
 
             <h3 className="text-xl font-medium mb-2">Logros Destacados:</h3>
-            <ul className="list-disc list-inside text-white text-lg">
+            <ul className="list-disc list-inside text-white text-lg md:text-xl">
               <li>Migración de la base de datos a <strong>MongoDB Atlas</strong>, implementando clusters de respaldo y mejorando el rendimiento de la instancia EC2.</li>
               <li>Diseño de endpoints paginados que redujeron el tiempo de carga de la aplicación móvil.</li>
               <li>Desarrollo de una aplicación móvil, un dashboard y APIs robustas, asegurando su sincronización y eficiencia.</li>
@@ -61,7 +61,7 @@ export default function Aboutme() {
         >
           {/* Imagen a la izquierda con iconos superpuestos */}
           <div className="w-full md:w-60 flex-shrink-0 relative flex justify-center">
-            <div className="relative w-60 h-60 transform transition-all duration-300 group group-hover:scale-110">
+            <div className="relative w-60 h-60 transform transition-all duration-300 group group-hover:scale-110 hover:rotate-6">
               <img
                 src={project.image}
                 alt={`${project.title} Project`}
@@ -93,7 +93,7 @@ export default function Aboutme() {
           </div>
           <div className="flex-1 flex flex-col gap-4">
             <h2 className="text-2xl font-semibold">{project.title}</h2>
-            <p className="text-white text-lg">{project.description}</p>
+            <p className="text-white text-lg md:text-xl">{project.description}</p>
             <h3 className="text-xl font-medium">Tecnologías Utilizadas:</h3>
             <div className="flex flex-wrap gap-2">
               {project.technologies.map((tech, techIndex) => (

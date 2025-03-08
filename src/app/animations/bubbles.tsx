@@ -7,38 +7,27 @@ type Bubble = {
   left: string;
   radius: string;
   floatDuration: string;
-  swayDuration: string;
   floatDelay: string;
-  swayDelay: string;
-  swayType: string;
 };
 
 const Bubbles: React.FC = () => {
+
+  // Derechos de autor de la animación: https://codepen.io/alphardex/pen/jOWMGON
   const [bubbles, setBubbles] = useState<Bubble[]>([]);
 
-  // Función para generar un número aleatorio dentro de un rango
   const randomRange = (min: number, max: number): number =>
     Math.random() * (max - min) + min;
 
-  // Función para seleccionar un valor aleatorio de una lista
-  const sample = <T,>(list: T[]): T =>
-    list[Math.floor(Math.random() * list.length)];
-
-  // Generar las burbujas solo en el cliente
   useEffect(() => {
     const bubbleCount = 50;
     const newBubbles: Bubble[] = Array.from({ length: bubbleCount }).map((_, i) => {
-      const swayType = sample(["sway-left-to-right", "sway-right-to-left"]);
 
       return {
         id: i,
-        left: `${randomRange(0, 100)}vw`, // Posición horizontal aleatoria
-        radius: `${randomRange(1, 10)}vw`, // Tamaño aleatorio
-        floatDuration: `${randomRange(6, 12)}s`, // Duración de la animación de flotar
-        swayDuration: `${randomRange(4, 6)}s`, // Duración de la animación de balanceo
-        floatDelay: `${randomRange(0, 4)}s`, // Retraso de la animación de flotar
-        swayDelay: `${randomRange(0, 4)}s`, // Retraso de la animación de balanceo
-        swayType, // Tipo de balanceo
+        left: `${randomRange(0, 100)}vw`,
+        radius: `${randomRange(1, 10)}vw`,
+        floatDuration: `${randomRange(6, 12)}s`,
+        floatDelay: `${randomRange(0, 4)}s`,
       };
     });
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import Bubbles from '../animations/bubbles';
 
 export default function Aboutme() {
 
@@ -24,16 +25,19 @@ export default function Aboutme() {
   }
 
   return (
-    <section className="flex flex-col justify-center items-center rounded-lg">
+    <section className="flex flex-col justify-center items-center rounded-lg relative">
+      <div className='absolute inset-0 z-0'>
+          <Bubbles />
+      </div>
       <div className="mt-8 text-center w-full max-w-2xl">
-        <h2 className="text-3xl font-semibold mb-4">Experiencia Laboral</h2>
-        <h3 className="text-lg md:text-xl font-medium">Bicycle Capital</h3>
-        <p className="text-white text-lg md:text-xl">Desarrollador FullStack</p>
-        <p className="text-white mb-5 text-lg md:text-xl">Septiembre 2022 - Febrero 2025</p>
+        <h2 className="text-3xl font-semibold mb-4 relative z-10">Experiencia Laboral</h2>
+        <h3 className="text-lg md:text-xl font-medium relative z-10">Bicycle Capital</h3>
+        <p className="text-white text-lg md:text-xl relative z-10">Desarrollador FullStack</p>
+        <p className="text-white mb-5 text-lg md:text-xl relative z-10">Septiembre 2022 - Febrero 2025</p>
         <div className="p-6 rounded-lg shadow-md mt-4 transform transition-all duration-300 hover:scale-105 bg-darkSeaGreen">
-          <h2 className="text-2xl font-semibold mb-4">Responsabilidades y Logros</h2>
+          <h2 className="text-2xl font-semibold mb-4 relative z-10">Responsabilidades y Logros</h2>
           <div className="text-left rounded-lg">
-            <h3 className="text-xl font-medium mb-2">Responsabilidades:</h3>
+            <h3 className="text-xl font-medium mb-2 relative z-10">Responsabilidades:</h3>
             <ul className="list-disc list-inside text-white mb-4 text-lg md:text-xl">
               <li>Gestión y mantenimiento de APIs, desarrollo de interfaces en <strong>React Native</strong> y creación de un dashboard en <strong>Angular</strong>.</li>
               <li>Configuración y administración de instancias <strong>EC2</strong>, gestión de DNS con <strong>Route53</strong> y balanceadores de carga.</li>
@@ -51,7 +55,7 @@ export default function Aboutme() {
           </div>
         </div>
       </div>
-    <div className="w-full h-auto rounded-lg shadow-md flex flex-col justify-center items-center py-16">
+    <div className="w-full h-auto rounded-lg shadow-md flex flex-col justify-center items-center py-16 relative z-10">
       <h2 className="text-3xl font-semibold mb-4">Proyectos</h2>
       <div className="w-full max-w-4xl mx-auto p-6">
       {projectsData.projects.map((project, index) => (

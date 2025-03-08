@@ -24,6 +24,9 @@ export default {
         'floatingLeft': 'floatingLeft 2s ease-in-out infinite',
         'floatingRight': 'floatingRight 2s ease-in-out infinite',
         'swing': 'swing 5s ease-in-out infinite',
+        "float-up": "float-up 6s ease-in infinite",
+        "sway-left-to-right": "sway-left-to-right 4s ease-in-out infinite alternate",
+        "sway-right-to-left": "sway-right-to-left 4s ease-in-out infinite alternate",
       },
       keyframes: {
         slideRightToLeft: {
@@ -59,9 +62,15 @@ export default {
           '50%': { transform: 'rotate(-10deg)' },
           '75%': { transform: 'rotate(5deg)' },
           '100%': { transform: 'rotate(0deg)' }
-        }
+        },
+        "float-up": {
+          from: { transform: "translateX(100%)" },
+          to: { transform: "translateY(-200vh) translateX(-100%)" },
+        },
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwindcss-animate"),
+  ],
 } satisfies Config;

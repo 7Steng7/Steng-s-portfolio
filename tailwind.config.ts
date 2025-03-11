@@ -25,8 +25,6 @@ export default {
         'floatingRight': 'floatingRight 2s ease-in-out infinite',
         'swing': 'swing 5s ease-in-out infinite',
         "float-up": "float-up 6s ease-in infinite",
-        "sway-left-to-right": "sway-left-to-right 4s ease-in-out infinite alternate",
-        "sway-right-to-left": "sway-right-to-left 4s ease-in-out infinite alternate",
       },
       keyframes: {
         slideRightToLeft: {
@@ -65,7 +63,7 @@ export default {
         },
         "float-up": {
           from: { transform: "translateX(100%)" },
-          to: { transform: "translateY(-200vh) translateX(-100%)" },
+          to: { transform: "translateY(-350vh) translateX(-100%)" },
         },
       },
     },

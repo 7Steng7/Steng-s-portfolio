@@ -98,7 +98,7 @@ export default function Aboutme() {
         <span className="absolute bottom-0 text-6xl opacity-30 animate-pulse z-0">⚓</span>
         <span className="relative z-10">Diario de viaje: Islas descubiertas</span>
       </h1>
-      <div className="min-h-screen">
+      <div className="min-h-screen relative z-10">
         <div className="max-w-3xl mx-auto lg:max-w-6xl pt-16">
           <div>
             {experiences.map((exp, index) => (

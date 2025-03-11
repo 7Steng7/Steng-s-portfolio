@@ -17,25 +17,27 @@ const Bubbles: React.FC = () => {
 
   const randomRange = (min: number, max: number): number =>
     Math.random() * (max - min) + min;
-
+  
   useEffect(() => {
     const bubbleCount = 50;
     const newBubbles: Bubble[] = Array.from({ length: bubbleCount }).map((_, i) => {
-
+      const radius = randomRange(1, 5); // Radio máximo de 5vw
+      const left = randomRange(0, 100 - radius - 0.5); // Resta 0.5vw como margen de seguridad
+  
       return {
         id: i,
-        left: `${randomRange(0, 100)}vw`,
-        radius: `${randomRange(1, 10)}vw`,
+        left: `${left}vw`,
+        radius: `${radius}vw`,
         floatDuration: `${randomRange(6, 12)}s`,
         floatDelay: `${randomRange(0, 4)}s`,
       };
     });
-
+  
     setBubbles(newBubbles);
   }, []);
 
   return (
-    <div className="w-full h-full overflow-hidden bg-deepNavyBlue">
+    <div className="overflow-hidden bg-deepNavyBlue" style={{ maxWidth: "90%" }}>
       {bubbles.map((bubble) => (
         <div
           key={bubble.id}

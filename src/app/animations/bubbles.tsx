@@ -22,7 +22,7 @@ const Bubbles: React.FC = () => {
     const bubbleCount = 50;
     const newBubbles: Bubble[] = Array.from({ length: bubbleCount }).map((_, i) => {
       const radius = randomRange(1, 5); // Radio máximo de 5vw
-      const left = randomRange(0, 100 - radius - 0.5); // Resta 0.5vw como margen de seguridad
+      const left = randomRange(0, 100 - radius - 10); // Resta 0.5vw como margen de seguridad
   
       return {
         id: i,
@@ -37,7 +37,7 @@ const Bubbles: React.FC = () => {
   }, []);
 
   return (
-    <div className="overflow-hidden bg-deepNavyBlue" style={{ maxWidth: "90%" }}>
+    <div className="overflow-hidden bg-deepNavyBlue">
       {bubbles.map((bubble) => (
         <div
           key={bubble.id}

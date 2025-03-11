@@ -26,7 +26,7 @@ export default function Aboutme() {
 
   return (
     <section className="flex flex-col justify-center items-center rounded-lg relative">
-      <div className='absolute inset-0 z-0 w-full'>
+      <div className='absolute inset-0 z-0'>
           <Bubbles />
       </div>
       <div className="mt-8 text-center w-full max-w-2xl">

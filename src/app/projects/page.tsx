@@ -20,6 +20,20 @@ export default function Aboutme() {
         "technologies": ["NestJS", "MongoDB", "Mongoose", "API Integration", "Swagger", 'Bcrypt', "Jest", "GCP"],
         "image": "/assets/blogApi.png",
         "github": "https://github.com/7Steng7/stengsBlogAPI"
+      },
+      {
+        "title": "API JWT-Token-Refresh",
+        "description": "Este proyecto es una API REST desarrollada con NestJS y Node.js, utilizando MongoDB como base de datos. Implementa un sistema de autenticación con JWT, proporcionados por un sistema de login, gestión de usuarios y recuperación de contraseña mediante correo electrónico.",
+        "technologies": ["NestJS", "MongoDB", "Mongoose", "API Integration", "Swagger", 'JWT', 'Nodemailer'],
+        "image": "/assets/tokenRefresh.png",
+        "github": "https://github.com/7Steng7/Nestjs-token-refresh"
+      },
+      {
+        "title": "API Movies",
+        "description": "API Rest para gestión de películas y usuarios. Desarrollada en Node.js y Express, con MariaDB. Incluye creación de usuarios, películas, filtrado, paginación, y gestión de películas vistas. Además de documentación en Postman y modelo relacional.",
+        "technologies": ["Nodejs", "Express", "Sequalize", "MariaDB", "Postman", 'ExpressValidation'],
+        "image": "/assets/apiMovies.png",
+        "github": "https://github.com/7Steng7/Express-Movies"
       }
     ]
   }
@@ -57,11 +71,11 @@ export default function Aboutme() {
       </div>
     <div className="w-full h-auto rounded-lg shadow-md flex flex-col justify-center items-center py-16 relative z-10">
       <h2 className="text-3xl font-semibold mb-4">Proyectos</h2>
-      <div className="w-full max-w-4xl mx-auto p-6">
+      <div className="w-full p-6 flex flex-col md:flex-row flex-wrap justify-around">
       {projectsData.projects.map((project, index) => (
         <div
           key={index}
-          className="flex flex-col md:flex-row items-center gap-8 mb-12"
+          className="flex flex-col md:flex-row items-center gap-8 mb-12 w-full xl:w-2/5"
         >
           {/* Imagen a la izquierda con iconos superpuestos */}
           <div className="w-full md:w-60 flex-shrink-0 relative flex justify-center">

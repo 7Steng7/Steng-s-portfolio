@@ -16,7 +16,7 @@ export default function Aboutme() {
       },
       {
         "title": "API blog",
-        "description": "Desarrollé una API RESTful para gestionar publicaciones de blog, usuarios y comentarios utilizando NestJS y MongoDB. La API incluye autenticación de usuarios, validación de datos, seguridad con contraseñas hasheadas y documentación automática con Swagger. Este proyecto demuestra mi habilidad para construir APIs escalables, modulares y bien documentadas. Además, generé una instancia en Google Cloud Platform (GCP) para desplegar la API, lo que me permitió gestionar infraestructura en la nube, configurar redes, y asegurar el despliegue de aplicaciones en un entorno profesional.",
+        "description": "Desarrollé una API RESTful para gestionar publicaciones de blog, usuarios y comentarios utilizando NestJS y MongoDB. La API incluye autenticación de usuarios, validación de datos, seguridad con contraseñas hasheadas y documentación automática con Swagger. Además, generé una instancia en Google Cloud Platform (GCP) para desplegar la API, lo que me permitió gestionar infraestructura en la nube, configurar redes, y asegurar el despliegue de aplicaciones en un entorno profesional.",
         "technologies": ["NestJS", "MongoDB", "Mongoose", "API Integration", "Swagger", 'Bcrypt', "Jest", "GCP"],
         "image": "/assets/blogApi.png",
         "github": "https://github.com/7Steng7/stengsBlogAPI"

@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function Aboutme() {
 
   return (
-    <section className="flex flex-col items-center justify-center p-8 bg-darkSeaGreen text-foreground rounded-md shadow-md relative z-10">
+    <section className="flex flex-col items-center justify-center p-8 bg-darkSeaGreen text-foreground rounded-b-md shadow-md relative z-10">
       <h2 className="text-3xl font-bold mb-6">Navega por mis redes</h2>
       <p className="text-center mb-6 max-w-md md:max-w-lg lg:max-w-xl text-lg md:text-xl lg:text-2xl">
         ¡Sigue mi estela! 🌊 Las olas digitales me llevan por tierras lejanas y mares desconocidos. 

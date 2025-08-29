@@ -1,5 +1,5 @@
 import React from 'react';
-import Timon from './timon';
+import Timon from './Timon';
 
 export default function Presentation() {
   return (

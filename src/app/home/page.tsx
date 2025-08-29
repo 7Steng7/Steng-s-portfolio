@@ -1,11 +1,12 @@
 'use client';
 import React from 'react';
-import Presentation from '../presentation/presentation';
-import Projects from '../projects/page';
+import Presentation from '../presentation/Presentation';
+import FrontendPage from '../projects/frontend/page';
+import BackendPage from '../projects/backend/page';
 import Skills from '../skills/page';
 import Aboutme from '../about/page';
 import Contact from '../contact/page';
-import Ship from '../Header/ship';
+import Ship from '../Header/Ship';
 
 export default function Home() {
   return (
@@ -14,7 +15,8 @@ export default function Home() {
       <Presentation />
       <Aboutme />
       <Skills />
-      <Projects />
+      <FrontendPage />
+      <BackendPage />
       <Contact />
     </>
   );

@@ -13,6 +13,7 @@ export default {
         foreground: '#ffffff',
         deepNavyBlue: '#002144',
         darkSeaGreen: '#004466',
+        softAqua : '#66aabb',
       },
       fontFamily: {
         pirate: ["Charm"],
@@ -24,7 +25,11 @@ export default {
         'floatingLeft': 'floatingLeft 2s ease-in-out infinite',
         'floatingRight': 'floatingRight 2s ease-in-out infinite',
         'swing': 'swing 5s ease-in-out infinite',
-        "float-up": "float-up 6s ease-in infinite",
+        'float-up': "float-up 6s ease-in infinite",
+        'moveForever1': "moveForever1 10s linear infinite",
+        'moveForever2': "moveForever2 8s linear infinite",
+        'moveForever3': "moveForever3 6s linear infinite",
+        'moveForever4': "moveForever4 4s linear infinite",
       },
       keyframes: {
         slideRightToLeft: {
@@ -64,6 +69,22 @@ export default {
         "float-up": {
           from: { transform: "translateX(100%)" },
           to: { transform: "translateY(-350vh) translateX(-100%)" },
+        },
+        moveForever1: {
+          "0%": { transform: "translate(85px, 0%)" },
+          "100%": { transform: "translate(-90px, 0%)" },
+        },
+        moveForever2: {
+          "0%": { transform: "translate(-90px, 0%)" },
+          "100%": { transform: "translate(85px, 0%)" },
+        },
+        moveForever3: {
+          "0%": { transform: "translate(85px, 0%)" },
+          "100%": { transform: "translate(-90px, 0%)" },
+        },
+        moveForever4: {
+          "0%": { transform: "translate(-90px, 0%)" },
+          "100%": { transform: "translate(85px, 0%)" },
         },
       },
     },

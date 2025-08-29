@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaReact, FaNodeJs, FaAngular, FaAws, FaGit, FaDocker } from 'react-icons/fa';
 import { SiNextdotjs, SiTailwindcss, SiExpress, SiJsonwebtokens, SiNestjs, SiMongodb, SiMysql, SiFirebase, SiPostman, SiTrello } from 'react-icons/si';
+import WavesTop from '../animations/WavesTop';
 
 export default function Aboutme() {
 
@@ -48,7 +49,9 @@ export default function Aboutme() {
   ];
 
   return (
-    <section className="flex flex-col justify-center items-center bg-darkSeaGreen rounded-t-lg py-16 relative z-10">
+    <>
+    <WavesTop />
+    <section className="flex flex-col justify-center items-center bg-darkSeaGreen py-16 relative z-10">
       <h2 className="text-3xl font-semibold text-center text-foreground mb-16">Herramientas del Capitán</h2>
       <div id="skills" className="rounded-lg flex flex-col justify-center items-center">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 px-4 w-full md:w-5/6 lg:w-3/4">
@@ -81,5 +84,6 @@ export default function Aboutme() {
         </div>
       </div>
     </section>
+    </>
   );
 }

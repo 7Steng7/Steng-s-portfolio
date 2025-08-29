@@ -1,5 +1,5 @@
 
-import Projects from "../page";
+import ProjectsList from "../ProjectList";
 
 const frontendProjects = [
     {
@@ -29,5 +29,5 @@ const frontendProjects = [
 ];
 
 export default function FrontendPage() {
-  return <Projects projects={frontendProjects} title="Proyectos Frontend" />;
+  return <ProjectsList projects={frontendProjects} title="Proyectos Frontend" />;
 }

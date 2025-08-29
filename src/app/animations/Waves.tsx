@@ -22,16 +22,16 @@ export default function Waves() {
           />
         </defs>
         <g className="animate-moveForever1">
-          <use xlinkHref="#gentle-wave" x="50" y="3" fill="#003355" /> {/* neutralBlue */}
+          <use xlinkHref="#gentle-wave" x="50" y="3" fill="#003355" />
         </g>
         <g className="animate-moveForever2">
-          <use xlinkHref="#gentle-wave" x="50" y="0" fill="#66aabb" /> {/* darkSeaGreen */}
+          <use xlinkHref="#gentle-wave" x="50" y="0" fill="#66aabb" />
         </g>
         <g className="animate-moveForever3">
-          <use xlinkHref="#gentle-wave" x="50" y="9" fill="#002144" /> {/* deepNavyBlue */}
+          <use xlinkHref="#gentle-wave" x="50" y="9" fill="#002144" />
         </g>
         <g className="animate-moveForever4">
-          <use xlinkHref="#gentle-wave" x="50" y="6" fill="#004466" /> {/* softAqua */}
+          <use xlinkHref="#gentle-wave" x="50" y="6" fill="#004466" />
         </g>
       </svg>
       <svg

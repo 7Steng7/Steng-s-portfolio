@@ -32,7 +32,7 @@ export default function Aboutme() {
   ];
 
   return (
-  <div className="w-3xl h-auto shadow-md flex flex-col items-center justify-center py-16 bg-deepNavyBlue">
+  <div className="w-3xl h-auto flex flex-col items-center justify-center py-16 bg-deepNavyBlue">
       <h1 className="text-3xl font-semibold text-white-900 mb-4">Bitacora del capitán</h1>
       <div className='w-5/6 md:5/6 lg:w-5/6'>
         <p className="text-foreground text-lg md:text-xl mb-6 w-full mt-4 mb">

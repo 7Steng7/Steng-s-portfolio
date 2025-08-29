@@ -10,7 +10,7 @@ return (
       {title && <h2 className="text-3xl font-semibold pt-12 mb-8">{title}</h2>}
 
       <div className="w-full p-6 flex flex-col md:flex-row flex-wrap justify-around">
-        {projects.map((project, index) => (
+        {projects?.map((project, index) => (
           <div
             key={index}
             className="flex flex-col md:flex-row items-center gap-8 mb-12 w-full xl:w-2/5"

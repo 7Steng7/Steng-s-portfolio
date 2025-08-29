@@ -1,6 +1,6 @@
 # **Página Web Personal**  
 
-¡Bienvenido a mi página web personal! Este proyecto es una representación digital de mi perfil profesional, donde muestro mis habilidades, experiencia y proyectos destacados. Está construido con **Next.js** y **Tailwind CSS**, lo que garantiza un rendimiento óptimo y un diseño moderno y responsive.  
+¡Bienvenido a mi página web personal! Este proyecto es una representación digital de mi perfil profesional, donde muestro mis habilidades, experiencia y proyectos destacados adaptado a una temática de pirata. Está construido con **Next.js** y **Tailwind CSS**, lo que garantiza un rendimiento óptimo y un diseño moderno y responsive.  
 
 ---
 

@@ -6,7 +6,7 @@ import WavesBottom from '../animations/WavesBottom';
 
 export default function Presentation() {
   return (
-    <>
+    <main id="home" >
     <WavesTop />
       <section className="flex flex-col justify-center items-center bg-darkSeaGreen md:items-start md:pl-16 md:items-start lg:pl-0 lg:flex-row lg:items-center lg:pl-16 pt-8 pb-8">
           <Timon />
@@ -18,6 +18,6 @@ export default function Presentation() {
           </div>
       </section>
       <WavesBottom />
-    </>
+    </main>
   );
 }

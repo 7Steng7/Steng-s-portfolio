@@ -19,43 +19,43 @@ export default function Header() {
           description: 'Explora la página principal y sus funciones.',
           imgSrc: '/assets/home.png',
           bgColor: '#002144',
-          link: '/home'
+          link: '#home'
         },
         {
           title: 'Capitán',
           description: 'Creando experiencias digitales y compartiendo conocimiento.',
           imgSrc: '/assets/about.png',
           bgColor: '#004466',
-          link: '/about'
+          link: '#about'
         },
         {
           title: 'Skills',
           description: 'Conoce las tecnologías y habilidades en las que me especializo.',
           imgSrc: '/assets/skills.png',
           bgColor: '#004466',
-          link: '/skills'
+          link: '#skills'
         },
         {
           title: 'Projects',
           description: 'Explora los proyectos más destacados.',
           imgSrc: '/assets/projects.png',
           bgColor: '#002144',
-          link: '/projects'
+          link: '#projects'
         },
         {
           title: '¡Hablemos a bordo!',
           description: 'Tienes preguntas o ideas que compartir. ¡Conecta conmigo y zarpemos hacia nuevos proyectos!',
           imgSrc: '/assets/experience.png',
           bgColor: '#002144',
-          link: '/contact'
+          link: '#contact'
         },
-        {
-          title: 'Blog',
-          description: 'Artículos, reflexiones e información interesante.',
-          imgSrc: '/assets/blog.png',
-          bgColor: '#004466',
-          link: '/blog'
-        },
+        // {
+        //   title: 'Blog',
+        //   description: 'Artículos, reflexiones e información interesante.',
+        //   imgSrc: '/assets/blog.png',
+        //   bgColor: '#004466',
+        //   link: '/blog'
+        // },
       ];
 
   return (
@@ -64,7 +64,7 @@ export default function Header() {
       <div className="relative overflow-hidden whitespace-nowrap w-full">
         <Typewiter />
       </div>
-      {/* Botón para mostrar/ocultar el menú */}
+
         <button
           onClick={toggleHeader}
         >
@@ -106,7 +106,7 @@ export default function Header() {
               transition: 'background 0.3s ease',
             }}
           >
-            <Link href={category.link} onClick={closeHeader} className="flex flex-col items-center justify-center text-center">
+            <a href={category.link} onClick={closeHeader} className="flex flex-col items-center justify-center text-center">
               <img
                 src={category.imgSrc}
                 alt={category.title}
@@ -114,7 +114,7 @@ export default function Header() {
               />
               <h2 className="text-lg font-medium md:text-lg lg:text-xl">{category.title}</h2>
               <p className="text-xs mt-1 md:text-base lg:text-lg">{category.description}</p>
-            </Link>
+            </a>
           </div>
         ))}
       </section>

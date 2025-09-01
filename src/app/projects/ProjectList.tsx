@@ -5,18 +5,18 @@ import Waves from '../animations/Waves';
 
 export default function ProjectsList({ projects , title }: ProjectsListProps) {
 return (
-    <div className="w-full h-auto rounded-lg shadow-md flex flex-col justify-center items-center py-16 relative z-10">
+    <main className="w-full h-auto rounded-lg shadow-md flex flex-col justify-center items-center py-16 relative z-10">
     <Waves />
       {title && <h2 className="text-3xl font-semibold pt-12 mb-8">{title}</h2>}
 
-      <div className="w-full p-6 flex flex-col md:flex-row flex-wrap justify-around">
+      <aside className="w-full p-6 flex flex-col md:flex-row flex-wrap justify-around">
         {projects?.map((project, index) => (
-          <div
+          <section
             key={index}
             className="flex flex-col md:flex-row items-center gap-8 mb-12 w-full xl:w-2/5"
           >
-            <div className="w-full md:w-60 flex-shrink-0 relative flex justify-center">
-              <div className="relative w-60 h-60 transform transition-all duration-300 group hover:scale-105 hover:rotate-2">
+            <section className="w-full md:w-60 flex-shrink-0 relative flex justify-center">
+              <figure className="relative w-60 h-60 transform transition-all duration-300 group hover:scale-105 hover:rotate-2">
                 <img
                   src={project.image}
                   alt={`${project.title} Project`}
@@ -43,9 +43,9 @@ return (
                     </a>
                   )}
                 </div>
-              </div>
-            </div>
-            <div className="flex-1 flex flex-col gap-4">
+              </figure>
+            </section>
+            <article className="flex-1 flex flex-col gap-4">
               <h2 className="text-2xl font-semibold">{project.title}</h2>
               <p className="text-white text-lg md:text-xl">{project.description}</p>
               <h3 className="text-xl font-medium">Tecnologías Utilizadas:</h3>
@@ -59,10 +59,10 @@ return (
                   </span>
                 ))}
               </div>
-            </div>
-          </div>
+            </article>
+          </section>
         ))}
-      </div>
-    </div>
+      </aside>
+    </main>
   );
 }

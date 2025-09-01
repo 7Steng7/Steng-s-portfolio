@@ -49,14 +49,14 @@ export default function Aboutme() {
   ];
 
   return (
-    <>
+    <main id="skills">
     <WavesTop />
-    <section className="flex flex-col justify-center items-center bg-darkSeaGreen py-16 relative z-10">
+    <aside className="flex flex-col justify-center items-center bg-darkSeaGreen py-16 relative z-10">
       <h2 className="text-3xl font-semibold text-center text-foreground mb-16">Herramientas del Capitán</h2>
-      <div id="skills" className="rounded-lg flex flex-col justify-center items-center">
+      <section id="skills" className="rounded-lg flex flex-col justify-center items-center">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 px-4 w-full md:w-5/6 lg:w-3/4">
           {skillsData.map((category, index) => (
-            <div key={index} className="bg-deepNavyBlue p-6 rounded-lg shadow-md text-center">
+            <section key={index} className="bg-deepNavyBlue p-6 rounded-lg shadow-md text-center">
               <img src={category.icon} alt={category.title} className="mx-auto mb-4 w-16 h-16 animate-swing" />
               <h3 className="text-2xl font-medium text-white mb-4">{category.title}</h3>
               <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6">
@@ -79,11 +79,11 @@ export default function Aboutme() {
                   </div>
                 ))}
               </div>
-            </div>
+            </section>
           ))}
         </div>
-      </div>
-    </section>
-    </>
+      </section>
+    </aside>
+    </main>
   );
 }

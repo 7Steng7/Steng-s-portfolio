@@ -3,7 +3,7 @@ import ShipBackground from '../../../public/assets/ShipBackground.png';
 
 export default function Ship() {
   return (
-    <section className="w-full h-auto flex items-center justify-center overflow-hidden relative z-10">
+    <section className="w-full h-auto flex items-center justify-center overflow-hidden relative z-10" style={{ marginTop: '60px' }}>
       <div className="w-full h-auto max-h-screen relative">
         <Image
           src={ShipBackground}

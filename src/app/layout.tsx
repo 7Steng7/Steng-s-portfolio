@@ -23,7 +23,9 @@ export default function RootLayout({
       <body
         className={`antialiased bg-deepNavyBlue text-foreground rounded-md shadow-md`}
       >
-        <Header />
+        <header className="fixed top-0 left-0 w-full z-50 bg-deepNavyBlue/60 backdrop-blur-md shadow-md w-full h-20">
+          <Header />
+        </header>
         {children}
       </body>
     </html>

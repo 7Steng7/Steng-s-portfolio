@@ -1,10 +1,11 @@
-import React from 'react';
+"use client";
+import React, { useRef } from 'react';
 import Image from 'next/image';
 import { useAnimeText } from '../animations/hooks/useAnimeText';
 
 export default function Aboutme() {
 
-  const titleRef = React.useRef<HTMLElement>(null);
+  const titleRef = useRef<HTMLElement>(null);
   useAnimeText(titleRef, { type: 'chars', loop: true, delay: 100 });
 
   const experiences = [

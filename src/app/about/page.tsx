@@ -1,7 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
+import { useAnimeText } from '../animations/hooks/useAnimeText';
 
 export default function Aboutme() {
+
+  const titleRef = React.useRef<HTMLElement>(null);
+  useAnimeText(titleRef, { type: 'chars', loop: true, delay: 100 });
 
   const experiences = [
     {
@@ -35,7 +39,7 @@ export default function Aboutme() {
   <main id="about" className="w-3xl h-auto flex flex-col items-center justify-center py-16 bg-deepNavyBlue">
       <h1 className="text-3xl font-semibold text-white-900 mb-4 text-center flex items-center justify-center">
         <span className="text-6xl opacity-30 animate-pulse z-0">📒</span>
-        <span className="relative z-10">Bitacora del capitán</span>
+        <span className="relative z-10" ref={titleRef}>Bitacora del capitán</span>
       </h1>
       <article className='w-5/6 md:5/6 lg:w-5/6'>
         <p className="text-foreground text-lg md:text-xl mb-6 w-full mt-4 mb">
